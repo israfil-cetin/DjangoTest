@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+
+{% block title %} Anasayfa - {{ block.super }}{% endblock %}
+{% block body %}
+    <div class="container-fluid">
+{#        <div class="row" style="margin-bottom: 30px">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: red; height: 100px "> 1. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: rgba(84,125,90,0.56); height: 100px ">2. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #5677a8; height: 100px ">3. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #ce9d5b; height: 100px ">4. Sutun</div>#}
+{#        </div>#}
+{#            <div class="row" style="margin-bottom: 30px">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: red; height: 100px "> 1. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: rgba(84,125,90,0.56); height: 100px ">2. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #5677a8; height: 100px ">3. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #ce9d5b; height: 100px ">4. Sutun</div>#}
+{#        </div>#}
+{#            <div class="row" style="margin-bottom: 30px">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: red; height: 100px "> 1. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: rgba(84,125,90,0.56); height: 100px ">2. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #5677a8; height: 100px ">3. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #ce9d5b; height: 100px ">4. Sutun</div>#}
+{#        </div>#}
+{#            <div class="row" style="margin-bottom: 30px">#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: red; height: 100px "> 1. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: rgba(84,125,90,0.56); height: 100px ">2. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #5677a8; height: 100px ">3. Sutun</div>#}
+{#            <div class="col-md-3 col-sm-6" style="background-color: #ce9d5b; height: 100px ">4. Sutun</div>#}
+{#        </div>#}
+        <div class="row">
+            <div class="col-md-4" style="background-color: red; height: 100px;"></div>
+            <div class="col-md-8" style="background-color: #62ff00; height: 100px;">
+                <div class="row">
+                    <div class="col-md-2" style="background-color: #1467ce; height: 100px;" ></div>
+                    <div class="col-md-6" style="background-color: #691fb4; height: 100px;" ></div>
+                    <div class="col-md-4" style="background-color: #32bf66; height: 100px;" ></div>
+                </div>
+            </div>
+
+        </div>
+    Hoşgeldiniz, {{ request.user.get_full_name }}
+    </div>
+
+{% endblock %}
