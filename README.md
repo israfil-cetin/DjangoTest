@@ -7,7 +7,7 @@ Bu django site öreneğini "barissaslan" adlı kullanıcının eğitimini izleye
 İndirdikten sonra proje dizini içerisinde:
 
 
-`virtualenv venv`
+`virtualenv venv .` "Nokta" bulunan konuma kurması için.
 
 Linux & Mac: `source venv/bin/activate`
 
@@ -19,6 +19,6 @@ Windows: `venv\Scripts\activate`
 
 `python manage.py migrate`
 
-`python manage.py createsuper`
+`python manage.py createsuper *name`
 
 `python manage.py runserver`
