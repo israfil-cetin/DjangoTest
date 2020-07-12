@@ -18,6 +18,8 @@ def register_view(request):
     if form.is_valid():
         user = form.save(commit=False)
         password = form.cleaned_data.get('password1')
+        user.first_name = form.cleaned_data.get('firstname')
+        user.last_name = form.cleaned_data.get('lastname')
         user.set_password(password)
         user.is_staff = True
         user.is_superuser = True
