@@ -19,6 +19,6 @@ Windows: `venv\Scripts\activate`
 
 `python manage.py migrate`
 
-`python manage.py createsuper *name`
+`python manage.py createsuperuser *name`
 
 `python manage.py runserver`
