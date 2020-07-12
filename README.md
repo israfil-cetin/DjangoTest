@@ -1,7 +1,7 @@
 
 ## Örnek Django blog site 
 
-Bu django site öreneğini "barissaslan" adlı kullanıcının eğitimini izleyerek, kullanılan araçların son versiyonlarını kullanarak yaptım.
+Bu django web site örneğini "barissaslan" adlı kullanıcının eğitimini izleyerek, kullanılan araçların son versiyonlarını kullanarak yaptım.
 
 ### Kurulum
 İndirdikten sonra proje dizini içerisinde:
@@ -19,6 +19,6 @@ Windows: `venv\Scripts\activate`
 
 `python manage.py migrate`
 
-`python manage.py createsuperuser *name`
+`python manage.py createsuperuser`
 
 `python manage.py runserver`
