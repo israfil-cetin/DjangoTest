@@ -7,7 +7,7 @@ Bu django site öreneğini "barissaslan" adlı kullanıcının eğitimini izleye
 İndirdikten sonra proje dizini içerisinde:
 
 
-`virtualenv venv .` "Nokta" bulunan konuma kurması için.
+`virtualenv venv`
 
 Linux & Mac: `source venv/bin/activate`
 
