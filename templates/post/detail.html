@@ -10,9 +10,9 @@
                 <div class="card" >
                   <div class="card-body">
                       {% if post.image %}
-                          <img src="{{ post.image.url }}" class="img-fluid">
+                          <img src="{{ post.image.url }}" class="img-fluid" alt="Post Img">
                       {% endif %}
-                    <h5 class="card-title">{{ post.title }} <small>{{ post.publising_date }}</small></h5>
+                    <h5 class="card-title">{{ post.title }} <small>{{ post.publishing_date }}</small></h5>
                     <h6> Yazar: {{ post.user.get_full_name }}</h6>
                     <p class="card-text">{{ post.content | safe | linebreaks }}</p>
                     <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Git</a>
