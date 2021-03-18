@@ -7,7 +7,7 @@ Bu django web site örneğini "barissaslan" adlı kullanıcının eğitimini izl
 İndirdikten sonra proje dizini içerisinde:
 
 
-`virtualenv venv`
+`python -m venv venv`
 
 Linux & Mac: `source venv/bin/activate`
 
