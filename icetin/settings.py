@@ -25,7 +25,7 @@ SECRET_KEY = 'o851tnel@&#_k*tm54-gl9j&+=d!t$bb68uasawg7voa40s2+2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["yemek.pythonanywhere.com","yemek.pythonanywhere.com/admin",]
+ALLOWED_HOSTS = ["yemek.pythonanywhere.com","yemek.pythonanywhere.com/admin","127.0.0.1"]
 
 
 # Application definition
@@ -147,5 +147,5 @@ CKEDITOR_CONFIGS = {
 }
 
 
-RECAPTCHA_PUBLIC_KEY = os.getenv("RECAP_SITE_KEY")
-RECAPTCHA_PRIVATE_KEY = os.getenv("RECAP_SECRET_KEY")
+RECAPTCHA_PUBLIC_KEY = str(os.getenv("RECAP_SITE_KEY"))
+RECAPTCHA_PRIVATE_KEY = str(os.getenv("RECAP_SECRET_KEY"))
