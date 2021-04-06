@@ -211,9 +211,9 @@ hr.invis3 {
     background: #fff none no-repeat scroll right center / auto 100%;
 }
 
-.navbar-toggler {
-    background: #000 none repeat scroll 0 0 !important;
-}
+/*.navbar-toggler {*/
+/*    background: #000 none repeat scroll 0 0 !important;*/
+/*}*/
 
 #map {
     height: 400px;
