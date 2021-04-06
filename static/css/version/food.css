@@ -127,7 +127,7 @@ p {
 }
 
 #cta {
-    background: rgba(0, 0, 0, 0) url("https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat scroll top center / cover;
+    background: rgba(0, 0, 0, 0) url("https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat scroll center / cover;
     position: relative;
 }
 
