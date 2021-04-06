@@ -5,7 +5,7 @@ def home_view(request):
     if request.user.is_authenticated:
 
         context = {
-            'isim':'İsrafil',
+            'isim':request.user.get_full_name,
         }
     else:
         context = {

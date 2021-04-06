@@ -21,6 +21,7 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'post:index' %}">Post</a>
       </li>
+
     {% if not request.user.is_authenticated %}
 
 
@@ -30,6 +31,9 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:login' %}">Giriş</a>
       </li>
+                  <li class="nav-item">
+            <a class="nav-link" href="">{{ isim }}</a>
+          </li>
     {% else %}
         <li class="nav-item">
         <a class="nav-link" href="{% url 'accounts:logout' %}">Çıkış</a>
@@ -41,6 +45,9 @@
 
           <li class="nav-item">
             <a class="nav-link" href="{% url 'post:create' %}">Yazı ekle</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">{{ isim }}</a>
           </li>
 
         {% endif %}

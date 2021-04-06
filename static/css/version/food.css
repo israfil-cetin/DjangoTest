@@ -127,7 +127,7 @@ p {
 }
 
 #cta {
-    background: rgba(0, 0, 0, 0) url(../../upload/cta_01.jpg) no-repeat scroll top center / cover;
+    background: rgba(0, 0, 0, 0) url("https://images.pexels.com/photos/434258/pexels-photo-434258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat scroll top center / cover;
     position: relative;
 }
 
@@ -158,11 +158,15 @@ p {
 }
 
 .jumbotron p {
-    padding: 2rem 0 2rem;
+    /*padding: 2rem 0 2rem;*/
     margin: 0;
     line-height: 31px;
-    font-size: 16px;
+    /* font-size: 16px; */
     color: #ffffff;
+    padding: 5px;
+    background: #4d4d4d;
+    opacity: 0.7;
+    font-size: 20px;
 }
 
 .blog-meta small {
