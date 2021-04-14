@@ -51,6 +51,7 @@
 </head>
 <body>
 
+
     <div id="wrapper">
         <section id="cta" class="jumbotron text-center">
             <div class="container">
@@ -91,16 +92,44 @@
 {#                </nav>#}
 {#            </div><!-- end container -->#}
 {#        </header><!-- end header -->#}
+{#    {% for post in posts %}#}
+{#        <div class="row">#}
+{#            <div class="col-md-8 offset-md-3">#}
+{#                <div class="card" >#}
+{#                  <div class="card-body">#}
+{#                      {% if post.image %}#}
+{#                          <img src="{{ post.image.url }}" class="img-fluid">#}
+{#                      {% endif %}#}
+{#                    <h5 class="card-title">{{ post.title }} <small>{{ post.publishing_date | timesince }} önce</small></h5>#}
+{#                    <h6 style="text-transform: capitalize;"> Yazar: {{ post.user.get_full_name }}</h6>#}
+{#                    <p class="card-text">{{ post.content | safe | linebreaks | truncatewords:15}}</p>#}
+{#                    <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Git</a>#}
+{#                        {% if request.user.is_authenticated %}#}
+{#                            <a href="{{ post.get_delete_url }}" class="btn btn-danger">Sil</a>#}
+{#                            <a href="{{ post.get_update_url }}" class="btn btn-info">Güncelle</a>#}
+{#                        {% endif %}#}
+{#                  </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    {% endfor %}#}
+
 
         <section class="section lb text-muted">
             <div class="container">
                 <div class="row grid-style">
+                    {% for post in posts %}
                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
                         <div class="blog-box">
                             <div class="post-media">
                                 <a href="{% static 'food-single.html' %}" title="">
                                     <span class="detail veg">Veg</span>
-                                    <img src="{% static 'upload/blog_square_10.jpg' %}" alt="" class="img-fluid">
+                                    {% if post.image %}
+                                          <img src="{{ post.image.url }}" class="img-fluid">
+                                        {% else %}
+                                           <img src="{% static 'upload/blog_square_10.jpg' %}" alt="" class="img-fluid">
+                                      {% endif %}
+
                                     <div class="hovereffect"></div>
                                 </a>
                             </div><!-- end media -->
@@ -113,90 +142,21 @@
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
                                 </div>
-                                <h4><a href="{% static 'food-single.html' %}" title="">Eggplant meat broth</a></h4>
-                                <p>Aenean interdum arcu blandit, vehicula magna non, placerat et pharetratortor.</p>
-                                <small><a href="{% static 'food-single.html' %}" title="">18 July, 2017</a></small>
-                                <small><a href="{% static '#' %}" title="">by Matilda</a></small>
+                                <h4><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a></h4>
+                                <p>{{ post.content | safe | linebreaks | truncatewords:3}}</p>
+                                <small>{{ post.publishing_date }}</small>
+                                <small><a href="{% static '#' %}" title="">{{ post.user.get_full_name }}</a></small>
                             </div><!-- end meta -->
                         </div><!-- end blog-box -->
                     </div><!-- end col -->
+                    {% endfor %}
 
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                        <div class="blog-box">
-                            <div class="post-media">
-                                <a href="{% static 'food-single.html' %}" title="">
-                                    <img src="{% static 'upload/blog_square_12.jpg' %}" alt="" class="img-fluid">
-                                    <div class="hovereffect"></div>
-                                </a>
-                            </div><!-- end media -->
 
-                            <div class="blog-meta big-meta">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <h4><a href="{% static 'food-single.html' %}" title="">Vegetable rice recipe</a></h4>
-                                <p>Vhicula magna non, placerat elit. Mauris et pharetratortor sodales urna.</p>
-                                <small><a href="{% static 'food-single.html' %}" title="">16 July, 2017</a></small>
-                                <small><a href="{% static '#' %}" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-                    </div><!-- end col -->
 
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                        <div class="blog-box">
-                            <div class="post-media">
-                                <a href="{% static 'food-single.html' %}" title="">
-                                    <span class="detail nonveg">Non-Veg</span>
-                                    <img src="{% static 'upload/blog_square_13.jpg' %}" alt="" class="img-fluid">
-                                    <div class="hovereffect"></div>
-                                </a>
-                            </div><!-- end media -->
 
-                            <div class="blog-meta big-meta">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star-o"></i>
-                                </div>
-                                <h4><a href="{% static 'food-single.html' %}" title="">Egg bread</a></h4>
-                                <p>Aenean suspendissea sodales urna. In at augue elit. Vivamus enim nibh ac felis.</p>
-                                <small><a href="{% static 'food-single.html' %}" title="">15 July, 2017</a></small>
-                                <small><a href="{% static '#' %}" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-                    </div><!-- end col -->
 
-                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-                        <div class="blog-box">
-                            <div class="post-media">
-                                <a href="{% static 'food-single.html' %}" title="">
-                                    <img src="{% static 'upload/blog_square_05.jpg' %}" alt="" class="img-fluid">
-                                    <div class="hovereffect"></div>
-                                </a>
-                            </div><!-- end media -->
 
-                            <div class="blog-meta big-meta">
-                                <div class="rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <h4><a href="{% static 'food-single.html' %}" title="">Plenty of creamy sweet</a></h4>
-                                <p>Aenean interdum arcu magna non, placerat elit. Mauris et pharetratortor.</p>
-                                <small><a href="{% static 'food-single.html' %}" title="">14 July, 2017</a></small>
-                                <small><a href="{% static '#' %}" title="">by Matilda</a></small>
-                            </div><!-- end meta -->
-                        </div><!-- end blog-box -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                    </div><!-- end row -->
 
                 <hr class="invis">
 
