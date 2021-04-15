@@ -56,7 +56,7 @@
         <section id="cta" class="jumbotron text-center">
             <div class="container">
 {#                <a href="{% static 'food-index.html' %}"><img src="{% static 'images/version/food-logo.png' %}" alt="" class="img-fluid"></a>#}
-                <p>Each year we've hosted the Best Food Blog Awards, we're astounded at the depth, variety, creativity, and ingenuity of the food blogs nominated..</p>
+                <p>Leziz Sağlıklı Tarifler</p>
 {#                <a href="{% static '#' %}" class="btn btn-primary">View Recipes</a>#}
             </div>
         </section>
@@ -117,13 +117,13 @@
 
         <section class="section lb text-muted">
             <div class="container">
-                <div class="row grid-style">
+                <div class="row grid-style" style="justify-content: center;">
                     {% for post in posts %}
                     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
                         <div class="blog-box">
                             <div class="post-media">
                                 <a href="{% static 'food-single.html' %}" title="">
-                                    <span class="detail veg">Veg</span>
+                                    <!--<span class="detail veg">Veg</span>-->
                                     {% if post.image %}
                                           <img src="{{ post.image.url }}" class="img-fluid">
                                         {% else %}
@@ -143,7 +143,7 @@
                                     <i class="fa fa-star"></i>
                                 </div>
                                 <h4><a href="{{ post.get_absolute_url }}" title="">{{ post.title }}</a></h4>
-                                <p>{{ post.content | safe | linebreaks | truncatewords:3}}</p>
+                                <p>{{ post.content | safe | linebreaks | truncatewords:5}}</p>
                                 <small>{{ post.publishing_date }}</small>
                                 <small><a href="{% static '#' %}" title="">{{ post.user.get_full_name }}</a></small>
                             </div><!-- end meta -->
